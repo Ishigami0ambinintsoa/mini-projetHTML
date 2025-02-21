@@ -1,22 +1,80 @@
-*{
+body {
+    /* espacement en bas du corps de la page pour q'uil ne cole pas au bas de l'écran */
+    padding: 0 0 3vw 0;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background: url(image/fond1.webp) center/cover fixed no-repeat;
+    /* le ';' sur la dernière proprieté est optionnel */
+    color: #ffffff
 }
-body{
-    background-color: #0288D1 ;
+
+main {
+    margin: 0;
+    /* mettez le hauteur en vw */
+    /* haut droite bas gauche  */
+    padding: 1vw 13vw 0 13vw
 }
-header{
-    background-color: #339ed8;
-    position: fixed;
-    display: flex;
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    color: rgb(48, 86, 117)
+}
+
+a:hover {
+    color: rgb(35, 125, 185)
+}
+
+header {
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    /* haut droite bas gauche  */
+    padding: 0.5vw 0 0 2vw;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    padding: 0 5%;
-    
+    border-bottom: rgba(225, 225, 225, 0.3) solid 1px;
+    border-bottom-left-radius: 40px;
+    width: 100%;
+    height: 12vh;
+    background-color: rgba(225, 225, 225, 0.3);
+    backdrop-filter: blur(5px)
+}
+
+nav {
+    padding: 0 0 0 1vw;
+    display: flex;
+    gap: 2rem
+}
+
+h1,
+h2 {
+    font-weight: bold;
+    text-align: center;
+    color: aqua
+}
+
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center
+}
+
+.image img {
+    /* mettez la longeur en vh */
+    width: 35vh;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+    transition: all 0.5s ease-in-out;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 2 /* L'image survolée apparaîtra au-dessus des autres */
 }
